@@ -45,5 +45,6 @@ export const useComic = () => {
     getComicById,
     getRandomComic,
     comic,
+    lastIndex,
   };
 };
