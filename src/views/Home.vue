@@ -27,7 +27,7 @@
   </nav>
 
   <div v-if="comic">
-    <h2>{{ comic.title }}</h2>
+    <h2>{{ comic.title }} #{{comic.num}}</h2>
     <img :src="comic.img" alt="comic-page">
 
     <br />
