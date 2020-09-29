@@ -12,6 +12,8 @@ async function setLastIndex() {
 }
 
 function getComicById(id: string) {
+  comic.value = undefined;
+
   comicRepository.getComicById(id)
     .then(({ data }) => {
       comic.value = data;
@@ -22,6 +24,8 @@ function getComicById(id: string) {
 const generateRandomIndex = (length: number) => `${~~(Math.random() * length) + 1}`;
 
 function getRandomComic() {
+  comic.value = undefined;
+
   if (lastIndex.value) {
     const randomIndex = generateRandomIndex(lastIndex.value);
 
